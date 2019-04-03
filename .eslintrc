@@ -1,0 +1,37 @@
+{
+    "globals": {
+        "priceSymbol": true,
+        "google": true,
+        "currentCountryCode": true,
+        "currencyCode": true,
+        "dataLayer": true,
+        "licenceName": true,
+        "licence": true,
+        "getLodop": true
+    },
+    "rules": {
+        "jsx-a11y/alt-text": 0,
+        "indent": 0,
+        "react/jsx-wrap-multilines": 0,
+        "space-before-function-paren": 0,
+        "jsx-a11y/no-noninteractive-element-interactions": 0,
+        "jsx-a11y/click-events-have-key-events": 0,
+        "array-callback-return": 0,
+        "prefer-template": 0,
+        "no-nested-ternary": "off",
+        "camelcase": "off",
+        "global-require": "off",
+        "import/no-dynamic-require": "off",
+        "react/no-find-dom-node": "off",
+        "react/jsx-no-bind": false,
+        "react/jsx-closing-bracket-location": "off",
+        "import/no-named-as-default-member": "off",
+        "consistent-return": 0
+    },
+    "env": {
+        "browser": true,
+        "node": true,
+        "commonjs": true,
+        "es6": true
+    }
+}
