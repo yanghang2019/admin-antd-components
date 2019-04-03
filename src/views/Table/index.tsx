@@ -1,10 +1,15 @@
 import * as React from "react";
-import { Button } from "antd"
-export default class LoginPage extends React.Component<{}, {}> {
+import { Table } from "antd";
+
+interface adminTableProps {
+	data: object[];
+	columns: object[];
+}
+export default class adminTable extends React.Component<adminTableProps, {}> {
 	render() {
+		const { data, columns } = this.props;
 		return (
-			// <h1>ni hao a</h1>
-			<Button type="danger">hi</Button>
+			<Table dataSource={data} columns={columns} />
 		)
 	}
 }
