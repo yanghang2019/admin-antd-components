@@ -1,5 +1,5 @@
 {
-    "name": "self-framwork",
+    "name": "admin-antd-components",
     "version": "1.0.0",
     "description": "create framework basic of webpack+typescript+mobx+react-router+rudx+slint+babel",
     "main": "index.js",
@@ -12,6 +12,7 @@
     "dependencies": {
         "@babel/polyfill": "^7.4.0",
         "@types/webpack-env": "^1.13.9",
+        "antd": "^3.16.1",
         "modules": "^0.4.0",
         "react": "^16.8.6",
         "react-dom": "^16.8.6"
