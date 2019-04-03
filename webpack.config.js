@@ -37,8 +37,22 @@ module.exports = {
                 exclude: path.resolve(__dirname, "node_modules")
             },
             {
+                test: /\.ts$/,
+                use: [{
+                        loader: "babel-loader",
+                        options: {
+                            presets: ['@babel/preset-react']
+                        }
+                    },
+                    {
+                        loader: "ts-loader"
+                    }
+                ],
+                exclude: path.resolve(__dirname, "node_modules")
+            },
+            {
                 test: /\.(sass|css)/,
-                use: ["styles-loader", "css-loader", "sass-loader"]
+                use: ["style-loader", "css-loader", "sass-loader"]
             },
             {
                 test: /\.(jpg|png|gif|jpeg)/,
