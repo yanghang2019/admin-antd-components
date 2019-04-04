@@ -2,7 +2,7 @@
     "name": "admin-ant-component",
     "version": "1.0.5",
     "description": "create framework basic of webpack+typescript+mobx+react-router+rudx+slint+babel",
-    "main": "./src/index.js",
+    "main": "./lib/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "tsc -w",
