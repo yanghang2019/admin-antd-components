@@ -12,6 +12,8 @@
 		"target": "es6",
 		"jsx": "react",
 		"moduleResolution": "node",
+		"baseUrl": "./src",
+		"outDir": "./lib",
 		"removeComments": true, /*移除所有注释*/
 		"experimentalDecorators": true, /*启用实验性的装饰器*/
 		"noUnusedLocals": true /*有局部变量未使用报错*/

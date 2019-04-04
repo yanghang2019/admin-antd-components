@@ -8,7 +8,9 @@ module.exports = {
     entry: srcPath + "/index.tsx",
     output: {
         path: path.resolve(__dirname, "./build"),
-        filename: "[name].js"
+        filename: "[name].js",
+        libraryTarget: "umd", // Important
+        umdNamedDefine: true // Important
     },
     watch: true,
     devServer: {
@@ -37,7 +39,8 @@ module.exports = {
                         }
                     },
                     {
-                        loader: "ts-loader"
+                        loader: "ts-loader",
+                        options: { transpileOnly: true }
                     }
                 ],
                 exclude: path.resolve(__dirname, "node_modules")
