@@ -1,9 +1,10 @@
 const path = require("path");
 
-const HtmlPlugin = require("html-webpack-plugin");
+// const HtmlPlugin = require("html-webpack-plugin");
 const srcPath = path.resolve(__dirname, "./src");
 
 module.exports = {
+    mode: "development",
     entry: srcPath + "/index.tsx",
     output: {
         path: path.resolve(__dirname, "./build"),
@@ -13,6 +14,7 @@ module.exports = {
     devServer: {
         port: 8901
     },
+    devtool: "source-map",
     resolve: {
         extensions: [".js", ".tsx", ".ts"],
         //基于webpack文件所在位置
@@ -21,6 +23,10 @@ module.exports = {
         },
         modules: [path.resolve(__dirname, "./src"), "node_modules"]
     },
+    resolveLoader: {
+        modules: ["node_modules", "src"]
+    },
+    externals: ["antd", "react", "react-dom"],
     module: {
         rules: [{
                 test: /\.tsx$/,
@@ -61,11 +67,11 @@ module.exports = {
 
         ]
     },
-    plugins: [
-        new HtmlPlugin({
-            title: "self-webpack",
-            template: "index.html"
-        })
-    ]
+    // plugins: [
+    //     new HtmlPlugin({
+    //         title: "self-webpack",
+    //         template: "index.html"
+    //     })
+    // ]
 
 }

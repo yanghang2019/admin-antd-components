@@ -1,12 +1,15 @@
 {
-    "name": "admin-antd-components",
-    "version": "1.0.0",
+    "name": "admin-ant-component",
+    "version": "1.0.1",
     "description": "create framework basic of webpack+typescript+mobx+react-router+rudx+slint+babel",
-    "main": "index.js",
+    "main": "build/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "tsc -w",
         "dev": "webpack-dev-server",
-        "build": "babel src --out-dir build"
+        "build": "rm -rf ./dist && npm run build:webpack && npm run build:ts",
+        "build:webpack": "webpack --config webpack.config.js",
+        "build:ts": "rm -rf ./build && tsc"
     },
     "author": "jack-yang",
     "license": "ISC",

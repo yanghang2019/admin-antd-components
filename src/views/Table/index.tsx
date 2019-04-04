@@ -5,7 +5,7 @@ interface adminTableProps {
 	data: object[];
 	columns: object[];
 }
-export default class adminTable extends React.Component<adminTableProps, {}> {
+export default class AdminTable extends React.Component<adminTableProps, {}> {
 	render() {
 		const { data, columns } = this.props;
 		return (
