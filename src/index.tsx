@@ -71,8 +71,4 @@
 // 	document.getElementById("app")
 
 // )
-import AdminTable from "./views/Table/index";
-
-module.exports = {
-	AdminTable
-}
+export { AdminTable } from "./views/Table/index";
