@@ -1,22 +1,25 @@
 {
 	"compileOnSave": false, /*在最顶层设置compileOnSave标记，可以让IDE在保存文件的时候根据tsconfig.json重新生成文件*/
 	"compilerOptions": {
-		"sourceMap": true, /*生成.map文件*/
-		"allowSyntheticDefaultImports": false, /*不允许没有设置默认到处的模块导入*/
-		"charset": "utf8", /*输入文件的字符集*/
-		"diagnostics": true, /*显示诊断信息*/
-		"extendedDiagnostics": true, /*显示详细的诊断信息*/
-		"noImplicitAny": false,
-		"noImplicitReturns": true, /*不是函数的所有返回路径都有返回值时报错*/
-		"module": "es6",
-		"target": "es6",
-		"jsx": "react",
+		"types": [
+			"node"
+		],
 		"moduleResolution": "node",
+		"jsx": "react",
+		"target": "es6",
+		"module": "commonjs",
+		"noImplicitAny": false,
+		"removeComments": true,
 		"baseUrl": "./src",
 		"outDir": "./lib",
-		"removeComments": true, /*移除所有注释*/
-		"experimentalDecorators": true, /*启用实验性的装饰器*/
-		"noUnusedLocals": true /*有局部变量未使用报错*/
+		"strictNullChecks": false,
+		"noUnusedLocals": true,
+		"typeRoots": [
+			// 表示在哪个目录下找声明文件
+			"node_modules/@types",
+			"./typings/modules"
+		],
+		"declaration": true,
 	},
 	"include": [
 		"./src/views/*.tsx",
@@ -24,6 +27,7 @@
 		"./login/*.tsx"
 	],
 	"exclude": [
-		"node_modules"
+		"node_modules",
+		"lib"
 	]
 }
