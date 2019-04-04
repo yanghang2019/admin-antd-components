@@ -1,17 +1,22 @@
 {
-    "name": "self-framwork",
-    "version": "1.0.0",
+    "name": "admin-ant-component",
+    "version": "1.0.1",
     "description": "create framework basic of webpack+typescript+mobx+react-router+rudx+slint+babel",
-    "main": "index.js",
+    "main": "build/index.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "dev": "webpack-dev-server"
+        "start": "tsc -w",
+        "dev": "webpack-dev-server",
+        "build": "rm -rf ./dist && npm run build:webpack && npm run build:ts",
+        "build:webpack": "webpack --config webpack.config.js",
+        "build:ts": "rm -rf ./build && tsc"
     },
     "author": "jack-yang",
     "license": "ISC",
     "dependencies": {
         "@babel/polyfill": "^7.4.0",
         "@types/webpack-env": "^1.13.9",
+        "antd": "^3.16.1",
         "modules": "^0.4.0",
         "react": "^16.8.6",
         "react-dom": "^16.8.6"
@@ -36,7 +41,7 @@
         "html-webpack-plugin": "^3.2.0",
         "node-sass": "^4.11.0",
         "sass-loader": "^7.1.0",
-        "styles-loader": "^1.0.0",
+        "style-loader": "^0.23.1",
         "ts-loader": "^5.3.3",
         "typescript": "^3.4.1",
         "url-loader": "^1.1.2",
