@@ -1,6 +1,6 @@
 {
     "name": "admin-ant-component",
-    "version": "1.0.5",
+    "version": "1.0.7",
     "description": "create framework basic of webpack+typescript+mobx+react-router+rudx+slint+babel",
     "main": "./build/main.js",
     "scripts": {
@@ -39,6 +39,8 @@
         "css-loader": "^2.1.1",
         "eslint": "^5.16.0",
         "html-webpack-plugin": "^3.2.0",
+        "husky": "^1.3.1",
+        "lint-staged": "^8.1.5",
         "node-sass": "^4.11.0",
         "sass-loader": "^7.1.0",
         "style-loader": "^0.23.1",
