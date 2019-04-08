@@ -8,7 +8,7 @@
         "start": "tsc -w",
         "dev": "webpack-dev-server",
         "build": "rm -rf ./dist && npm run build:webpack && npm run build:ts",
-        "build:webpack": "webpack --config webpack.config.js",
+        "build:webpack": "webpack --config ./build/webpack.config.js",
         "build:ts": "rm -rf ./lib && tsc"
     },
     "author": "jack-yang",

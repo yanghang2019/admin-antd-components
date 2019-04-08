@@ -1,5 +1,4 @@
 const path = require("path");
-
 // const HtmlPlugin = require("html-webpack-plugin");
 const srcPath = path.resolve(__dirname, "./src");
 
@@ -7,9 +6,9 @@ const { tsRules, styleRules, imgRules } = require("./rules/index");
 
 module.exports = {
     mode: "development",
-    entry: srcPath + "/index.tsx",
+    entry: "./src/index.tsx",
     output: {
-        path: path.resolve(__dirname, "./dist"),
+        path: path.resolve(__dirname, "../dist"),
         filename: "[name].js",
         libraryTarget: "umd", // Important
         umdNamedDefine: true // Important
@@ -32,7 +31,7 @@ module.exports = {
     },
     externals: ["antd", "react", "react-dom"],
     module: {
-        rules: [...styleRules, ...styleRules, ...imgRules]
+        rules: [...tsRules, ...styleRules, ...imgRules]
     },
     // plugins: [
     //     new HtmlPlugin({
