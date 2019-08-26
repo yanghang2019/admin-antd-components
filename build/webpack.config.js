@@ -1,5 +1,5 @@
 const path = require("path");
-// const HtmlPlugin = require("html-webpack-plugin");
+const HtmlPlugin = require("html-webpack-plugin");
 const srcPath = path.resolve(__dirname, "./src");
 
 const { tsRules, styleRules, imgRules } = require("./rules/index");
@@ -33,11 +33,10 @@ module.exports = {
     module: {
         rules: [...tsRules, ...styleRules, ...imgRules]
     },
-    // plugins: [
-    //     new HtmlPlugin({
-    //         title: "self-webpack",
-    //         template: "index.html"
-    //     })
-    // ]
-
+    plugins: [
+        new HtmlPlugin({
+            title: "self-webpack",
+            template: "index.html"
+        })
+    ]
 }

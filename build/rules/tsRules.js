@@ -2,10 +2,7 @@ const path = require("path");
 module.exports = [{
         test: /\.tsx$/,
         use: [{
-                loader: "babel-loader",
-                options: {
-                    presets: ['@babel/preset-react']
-                }
+                loader: "babel-loader"
             },
             {
                 loader: "ts-loader",

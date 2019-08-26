@@ -6,7 +6,7 @@
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
         "start": "tsc -w",
-        "dev": "webpack-dev-server",
+        "dev": "webpack-dev-server --config ./build/webpack.config.js",
         "build": "rm -rf ./dist && npm run build:webpack && npm run build:ts",
         "build:webpack": "webpack --config ./build/webpack.config.js",
         "build:ts": "rm -rf ./lib && tsc"
